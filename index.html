@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ветклиника «Лапка»</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <h1>🐾 Ветеринарная клиника «Лапка»</h1>
+        <nav>
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#record">Записаться</a>
+        </nav>
+    </header>
+
+    <!-- О клинике -->
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Мы лечим кошек, собак, птиц, грызунов и других домашних животных.
+           Работаем ежедневно с 9:00 до 21:00.</p>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services">
+        <h2>Услуги</h2>
+        <ul>
+            <li>Осмотр и консультация врача</li>
+            <li>Вакцинация</li>
+            <li>Анализы и УЗИ</li>
+            <li>Хирургия</li>
+        </ul>
+    </section>
+
+    <!-- Форма записи -->
+    <section id="record">
+        <h2>Записать питомца к врачу</h2>
+
+        <!-- novalidate отключает встроенную проверку браузера, чтобы проверял наш JS -->
+        <form id="form" novalidate>
+
+            <label for="petName">Имя питомца</label>
+            <input type="text" id="petName" placeholder="Например: Барсик">
+            <span class="error" id="petNameError"></span>
+
+            <label for="petAge">Возраст питомца (лет)</label>
+            <input type="number" id="petAge" placeholder="Например: 3">
+            <span class="error" id="petAgeError"></span>
+
+            <label for="ownerName">Имя владельца</label>
+            <input type="text" id="ownerName" placeholder="Например: Иван">
+            <span class="error" id="ownerNameError"></span>
+
+            <label for="petType">Тип питомца</label>
+            <select id="petType">
+                <option value="">-- Выберите --</option>
+                <option value="Кошка">Кошка</option>
+                <option value="Собака">Собака</option>
+                <option value="Птица">Птица</option>
+                <option value="Грызун">Грызун</option>
+                <option value="Другое">Другое</option>
+            </select>
+            <span class="error" id="petTypeError"></span>
+
+            <label for="description">Описание болезни</label>
+            <textarea id="description" rows="4" placeholder="Опишите, что беспокоит питомца"></textarea>
+            <span class="error" id="descriptionError"></span>
+
+            <label for="phone">Номер телефона</label>
+            <input type="tel" id="phone" placeholder="+7 900 123-45-67">
+            <span class="error" id="phoneError"></span>
+
+            <button type="submit">Записаться</button>
+        </form>
+
+        <!-- Сюда выведем сообщение об успешной записи -->
+        <div id="result"></div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>© 2026 Ветклиника «Лапка» · Телефон: +7 (900) 000-00-00</p>
+    </footer>
+
+    <!-- Подключаем скрипт в конце, чтобы элементы страницы уже были загружены -->
+    <script src="script.js"></script>
+</body>
+</html>
